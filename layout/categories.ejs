@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- partial('_partial/head') %>
+
+    <body>
+        <%- partial('_partial/header') %>
+            <%- partial('_partial/navbar', {current: 'categories' }) %>
+
+                <main class="container my-4">
+                    <div class="col-lg-12">
+                        <h2 class="mb-4">Categories</h2>
+                        <% if (site.categories && site.categories.length> 0) { %>
+                            <ul class="list-group">
+                                <% site.categories.forEach(function(category) { %>
+                                    <li class="list-group-item">
+                                        <a class="cat-link" href="<%= url_for(category.path) %>">
+                                            <%= category.name %> (<%= category.length %>)
+                                        </a>
+                                    </li>
+                                    <% }); %>
+                            </ul>
+                            <% } else { %>
+                                <p class="text-center">No categories found.</p>
+                                <% } %>
+                    </div>
+                </main>
+
+                <%- partial('_partial/footer') %>
+    </body>
+
+</html>

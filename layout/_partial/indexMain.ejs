@@ -1,0 +1,30 @@
+<main class="container my-4">
+    <div class="col-lg-12">
+        <% page.posts.forEach(function(post) { %>
+            <article class="card">
+                <div class="card-body">
+                    <header>
+                        <h2 class="card-title">
+                            <%= post.title %>
+                        </h2>
+                        <%- partial('_partial/categoryLink', { post: post}) %>
+                            <hr>
+                    </header>
+                    <p><%- post.excerpt.replace(/<[^>]*>/g, '').trim() %></p>
+                    <div class="read-more">
+                        <a href="<%- url_for(post.path) %>">Read
+                            More...</a>
+                    </div>
+                    <hr>
+
+                    <div class="d-flex">
+                        <p class="text-muted ms-auto">
+                            <%= post.date.format(' YYYY-MM-DD HH:mm') %>
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+            <% }); %>
+    </div>
+</main>

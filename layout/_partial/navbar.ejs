@@ -1,0 +1,44 @@
+<% const currentPage=typeof current !=='undefined' ? current : '' ; %>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link <% if (currentPage === 'home') { %>active<% } %>"
+                            href="<%- url_for('/') %>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if (currentPage === 'categories') { %>active<% } %>"
+                            href="<%- url_for('/categories/') %>">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if (currentPage === 'tags') { %>active<% } %>"
+                            href="<%- url_for('/tags/') %>">Tags</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if (currentPage === 'about') { %>active<% } %>"
+                            href="<%- url_for('/about/') %>">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <style>
+                nav a.nav-link {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+                nav a.nav-link.active {
+                    font-weight: bold;
+                    color: #ffcc00;
+                }
+
+                nav a.nav-link:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            </style>
+        </nav>
+    </div>
