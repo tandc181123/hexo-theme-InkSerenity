@@ -1,15 +1,17 @@
 # hexo-theme-InkSerenity
-A simple theme
+**A simple and elegant theme for Hexo.**
 
-## How to Use
-
+## Installation Guide
+### 1. Download the Theme
+Clone the theme repository into your Hexo project's `themes` folder:
 ```
 git clone https://github.com/tandc181123/hexo-theme-InkSerenity.git themes/InkSerenity
 cd themes/InkSerenity
 npm install
 ```
 
-### Edit scaffolds/page.md
+### 2. Update Hexo Scaffolds
+Modify the default `scaffolds/page.md` file to include required metadata:
 ```
 ---
 title: {{ title }}
@@ -18,27 +20,39 @@ current: {{ title }}
 ---
 ```
 
-### Required Pages
-The following pages need to be created manually; otherwise, the related features will not work properly:
-- categories
-- tags
-- about
+### 3. Create Required Pages
+Manually create the following pages for all features to function properly:
+- **Categories**
+- **Tags**
+- **About**
 
+Run the following command for each page:
 ```bash
 hexo new page <page-name>
 ```
+Example for creating the categories page:
+```bash
+hexo new page categories
+```
 
-### Utterances
-This configuration is located in the *theme*’s _config.yml file.
+### 4. Apply the InkSerenity Theme
+In the root `_config.yml` file of your Hexo project, update the `theme` setting:
+```yml
+theme: InkSerenity
+```
+### Optional Configurations
+#### Utterances (Commenting System)
+To enable **Utterances**, configure it in the theme's `_config.yml` file:
 ```yml
 utterances:
-  repo: "<username>/<repo-name>"
+  repo: "<username>/<repo-name>" # Replace with your Github repository
   issue_term: "pathname"
   theme: "github-light"
 ```
-
-### Change the theme to InkSerenity
-This configuration is located in the *root* _config.yml
+>**Note**: Utterances requires a valid Github repository to store comments.
+### Google Analytics
+To enable **Google Analytics**, configure your tracking ID in the theme's `_config.yml` file:
 ```yml
-theme: InkSerenity
+google_analytics: 
+G-XXXXXXXXXX # Replace with your tracking ID
 ```
