@@ -11,7 +11,7 @@
 body {
     font-family: 'Merriweather', 'LXGW WenKai Mono TC', monospace;
     font-weight: 400;
-    font-size: normal;
+    font-size: 16px;
 }
 
 .index-cat-link {
@@ -66,13 +66,6 @@ hr {
     margin: 20px 0;
 }
 
-.highligt {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-left: 4px solid #ffcc00;
-    margin-bottom: 20px;
-}
-
 footer p {
     font-size: 1.1rem;
     color: #fff;
@@ -87,13 +80,27 @@ footer p:hover {
     margin: 0 auto;
 }
 
+/* nav */
+nav a.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+nav a.nav-link.active {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+nav a.nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
 /* image */
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
 }
 
 /* code block */
@@ -103,6 +110,16 @@ figure.highlight {
     color: #d8dee9;
     border-radius: 5px;
     padding: 10px;
+}
+
+/* hamburger menu */
+
+.navbar-toggler {
+    margin-left: 20px;
+}
+
+.navbar-collapse {
+    margin-left: 20px;
 }
 
 /* responsive */
