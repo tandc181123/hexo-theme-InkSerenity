@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+/* card */
+
+.card {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
 /* fonts */
 
 body {
@@ -100,7 +106,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0.5rem auto;
+    margin: 0.5rem 0;
 }
 
 /* code block */
