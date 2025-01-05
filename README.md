@@ -42,7 +42,7 @@ theme: InkSerenity
 ```
 ### Optional Configurations
 #### Utterances (Commenting System)
-To enable **Utterances**, configure it in the theme's `_config.yml` file:
+To enable **Utterances**, configure it in the root `_config.yml` file:
 ```yml
 utterances:
   repo: "<username>/<repo-name>" # Replace with your Github repository
@@ -51,8 +51,7 @@ utterances:
 ```
 >**Note**: Utterances requires a valid Github repository to store comments.
 ### Google Analytics
-To enable **Google Analytics**, configure your tracking ID in the theme's `_config.yml` file:
+To enable **Google Analytics**, configure your tracking ID in the root `_config.yml` file:
 ```yml
-google_analytics: 
-G-XXXXXXXXXX # Replace with your tracking ID
+google_analytics: G-XXXXXXXXXX # Replace with your tracking ID
 ```
