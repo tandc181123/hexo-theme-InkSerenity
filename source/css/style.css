@@ -135,6 +135,12 @@ blockquote p {
     margin-bottom: 0;
 }
 
+/* hr */
+
+hr {
+    border-top: 1px solid #aaa;
+}
+
 /* hamburger menu */
 
 .navbar-toggler {

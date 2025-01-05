@@ -1,8 +1,6 @@
-# _config.yml
-
 utterances:
-  repo: "<username>/<repo-name>"
+  repo: "tandc181123/myblog-comments"
   issue_term: "pathname"
   theme: "github-light"
 
-google_analytics: G-XXXXXXXXXX
+google_analytics: G-TL6K8LTVDG
