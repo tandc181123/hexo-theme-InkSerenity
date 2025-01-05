@@ -1,0 +1,8 @@
+# _config.yml
+
+utterances:
+  repo: "<username>/<repo-name>"
+  issue_term: "pathname"
+  theme: "github-light"
+
+google_analytics: G-XXXXXXXXXX
